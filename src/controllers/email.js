@@ -1,19 +1,19 @@
 const nodemailer = require('nodemailer');
 
 let transporter = nodemailer.createTransport({
-    service: 'gmail',
+    service: 'yourservice',
     auth: {
-        host: 'smtp.gmail.com',
+        host: 'smtp.server.com',
         port: 465,
         use_authentication: true,
-        user: "ericksoi3709@gmail.com",
-        pass: "udelraqjvfospwaq"
+        user: "example@mail.com",
+        pass: "12345"
     }
 });
 
 let message = {
-    from: "ericksoi3709@gmail.com",
-    to: "erick.soi@hotmail.com",
+    from: "example@mail.com",
+    to: "example@mail.com",
     subject: "Subject",
     html: "<h1>Hello Test SMTP Email</h1>",
     attachments: [{
